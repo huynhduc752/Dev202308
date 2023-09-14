@@ -1,0 +1,48 @@
+html{
+    font-size: 30px;
+}
+.card-content{
+    position: relative;
+}
+.add-card{
+    opacity: 1;
+    display: none;
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: 100%;
+}
+.add-card button{
+    width: 100%;
+    padding: 1rem;
+}
+@keyframes showBtn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.card:hover .add-card{
+    animation: showBtn 1s;
+    display: block;
+}
+
+.list-card .card{
+    width: 15rem !important;
+} 
+
+@media only screen and (max-width: 1200px) {
+    
+    html{
+        font-size: 20px;    
+    }
+  }@media only screen and (max-width: 500px) {
+    
+    html{
+        font-size: 10px;
+    }
+  }
+
+/* đơn vị trong css: rem em
+  quy ước: tất cả giá trị rem/em đều được đưa về px
+           1rem = value(font-size) trong element html
+           1em = value(font-size) trong element cha
+*/

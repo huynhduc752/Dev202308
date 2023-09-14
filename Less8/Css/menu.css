@@ -31,8 +31,8 @@
     display: none;
 }
 @keyframes running {
-    0% {top: 150%; left: -100px;}
-    100% {top:100%; left: 0   };
+    from {top: 150%; left: -100px;}
+    to {top:100%; left: 0};
 }
 
 .option:hover .menu-cap-2{
