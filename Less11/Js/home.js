@@ -16,6 +16,14 @@ function summary(){
     $('.sum-product .text-price .all-price').text(sum);
 }   
 
+function blockBottom(className){
+    var number = $('.' + className + ' .quantity').val();
+    if(number <=0 ){
+        alert("ko dc am");
+        $('.' + className + ' .quantity').val(0);
+        return;
+    }
+}
 
 var listProduct = [
     {
@@ -69,9 +77,12 @@ var listProduct = [
                             </div>
                         </div>
                         <div class="item-quantity">
-                            <input onchange="summary" type="number" name="quantity" value="${listProduct[i].number}" class="quantity">
+                            <input onchange="blockBottom('item-card-${listProduct[i].id}')" type="number" name="quantity" value="${listProduct[i].number}" class="quantity">
                         </div>
                     </div>`
                     ;
         $('.list-item').append(view);
     }
+
+    // btvn: tạo 1 danh sách tin tức (arrayObject)
+    // hiển thị all tin tức lên giao diện với các tham số tương ứng
